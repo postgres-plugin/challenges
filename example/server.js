@@ -2,7 +2,6 @@
 
 var Hapi = require('hapi');
 var Hoek = require('hoek');
-var fs = require('fs');
 
 var server = new Hapi.Server();
 
