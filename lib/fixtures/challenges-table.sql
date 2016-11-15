@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS challenges (
 );
 
 -- Create table
--- CREATE TABLE IF NOT EXISTS challenges_tags (
---   tag_id INTEGER REFERENCES tags (id),
---   challenge_id INTEGER REFERENCES challenges (id)
--- );
+CREATE TABLE IF NOT EXISTS challenges_tags (
+  tag_id INTEGER REFERENCES tags (id),
+  challenge_id INTEGER REFERENCES challenges (id)
+);
