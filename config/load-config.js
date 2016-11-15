@@ -3,7 +3,7 @@
 /**
 * Create default config or use the environment variables if defined
 */
-require('env2')('.env');
+var env = require('env2')('.env'); //eslint-disable-line
 
 
 // DEFAULTS
@@ -38,9 +38,8 @@ function setUpConfig () {
   if (process.env.NODE_ENV === 'test') {
     return test;
   }
-  else {
-    return defaults;
-  }
+
+  return defaults;
 }
 
 module.exports = setUpConfig;

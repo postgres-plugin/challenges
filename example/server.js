@@ -27,18 +27,16 @@ function init (config, callback) {
       path: '/',
       handler: function (request, reply) {
         var obj = {
-          'title': 'Tea',
-          'description': 'With milk',
-          'date': '2016-01-01',
-          'org_id': 1,
-          'creator_id': 2,
-          'active': false
+          title: 'Tea',
+          description: 'With milk',
+          date: '2016-01-01',
+          org_id: 1,
+          creator_id: 2,
+          active: false
         };
-        request.addChallenge(obj, function(error, response) {
+
+        request.addChallenge(obj, function (error, response) {
           Hoek.assert(!error, 'Add Challenge failed');
-          console.log('>>>>>>>>>>>>>>>>>>>');
-          console.log(error, response);
-          console.log('>>>>>>>>>>>>>>>>>>>');
           reply(response);
         });
       }
