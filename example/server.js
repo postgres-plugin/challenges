@@ -2,36 +2,37 @@
 
 var Hapi = require('hapi');
 var Hoek = require('hoek');
-
-var server = new Hapi.Server();
-
 var challenges = require('../lib/index.js');
 var pg = require('pg');
 
+function init (config, callback) {
+  var server = new Hapi.Server();
+  var pool = new pg.Pool(config.pg);
 
-function init (port, pgConfig, callback) {
-  var pgPool = new pg.Pool(pgConfig);
-
-  server.connection({ port: port });
-
-  server.route([{
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-      return reply('hello');
-    }
-  }]);
+  server.connection({ port: config.port });
 
   server.register([{
     register: challenges,
     options: {
-      pgPool: pgPool,
-      database: pgConfig.database
+      pool: pool,
+      database: config.pg.database
     }
   }], function (err) {
-    Hoek.assert(!err, err);
+    if (err) {
+      return callback(err);
+    }
 
-    return callback(null, server, pgPool);
+    server.route([{
+      method: 'GET',
+      path: '/',
+      handler: function (request, reply) {
+        return reply('hello');
+      }
+    }]);
+
+    return server.start(function (errorStart) {
+      return callback(errorStart, server, pool);
+    });
   });
 }
 
