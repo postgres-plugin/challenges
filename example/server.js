@@ -13,10 +13,7 @@ function init (config, callback) {
 
   server.register([{
     register: challenges,
-    options: {
-      pool: pool,
-      database: config.pg.database
-    }
+    options: { pool: pool }
   }], function (err) {
     if (err) {
       return callback(err);
