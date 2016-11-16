@@ -28,15 +28,14 @@ function init (config, callback) {
           description: 'With milk',
           date: '2016-01-01',
           org_id: 1,
-          creator_id: 2,
+          creator_id: 1,
           active: false
         };
 
-        // request.addChallenge(obj, function (error, response) {
-        //   Hoek.assert(!error, 'Add Challenge failed');
-        //   reply(response);
-        // });
-        reply([]);
+        request.addChallenge(obj, function (error, response) {
+          Hoek.assert(!error, 'Add Challenge failed');
+          reply(response);
+        });
       }
     }]);
 
