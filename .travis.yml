@@ -14,7 +14,7 @@ services:
 before_script:
   - psql -c 'create database ce100_test;' -U postgres
 
-  - psql -c '\connect ce100_test' -U postgres
+  - psql -c 'USE ce100_test;' -U postgres
   - psql -c 'create table organisations;' -U postgres
   - psql -c 'create table people;' -U postgres
   - psql -c 'insert into organisations (id) values (1);'  -U postgres
