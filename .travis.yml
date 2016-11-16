@@ -12,7 +12,11 @@ addons:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database ce100_test; create table organisations; create table people; insert into organisations (id) values (1); insert into people (id) values (1)' -U postgres
+  - psql -c 'create database ce100_test;' -U postgres
+  - psql -c 'create table organisations;' -U postgres
+  - psql -c 'create table people;' -U postgres
+  - psql -c 'insert into organisations (id) values (1);'  -U postgres
+  - psql -c 'insert into people (id) values (1);' -U postgres
 before_install:
   - pip install --user codecov
   - $CXX --version
