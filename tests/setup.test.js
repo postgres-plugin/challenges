@@ -12,7 +12,7 @@ test('Server start ok', function (t) {
     }
 
     return server.inject({ method: 'GET', url: '/' }, function (res) {
-      t.deepEqual(res.payload, '[]', 'server is up and running!');
+      t.equal(res.payload, '[]', 'server is up and running!');
 
       return pool.end(function () {
         server.stop(t.end);

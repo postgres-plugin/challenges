@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS challenges (
   title VARCHAR(50) NOT NULL,
   description TEXT NOT NULL,
   date DATE NOT NULL,
-  org_id INTEGER NOT NULL,
-  creator_id INTEGER NOT NULL,
+  org_id INTEGER REFERENCES organisations (id) NOT NULL,
+  creator_id INTEGER REFERENCES people (id) NOT NULL,
   active BOOLEAN NOT NULL
 );
 

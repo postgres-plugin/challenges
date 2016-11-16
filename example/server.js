@@ -32,10 +32,11 @@ function init (config, callback) {
           active: false
         };
 
-        request.addChallenge(obj, function (error, response) {
-          Hoek.assert(!error, 'Add Challenge failed');
-          reply(response);
-        });
+        // request.addChallenge(obj, function (error, response) {
+        //   Hoek.assert(!error, 'Add Challenge failed');
+        //   reply(response);
+        // });
+        reply([]);
       }
     }]);
 
