@@ -1,0 +1,1 @@
+/Users/jmurphy/web/postgres-plugins/Challenges/node_modules/goodparts/.eslintrc.js
