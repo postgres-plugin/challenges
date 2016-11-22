@@ -43,4 +43,4 @@ function setUpConfig () {
   return test;
 }
 
-module.exports = setUpConfig;
+module.exports = setUpConfig();

@@ -5,6 +5,27 @@ DROP TABLE IF EXISTS tags_organisations CASCADE;
 DROP TABLE IF EXISTS organisations CASCADE;
 DROP TABLE IF EXISTS people CASCADE;
 
+-- TAGS --
+DROP TABLE IF EXISTS tags_categories;
+DROP TABLE IF EXISTS tags cascade;
+DROP TABLE IF EXISTS categories cascade;
+CREATE TABLE IF NOT EXISTS tags (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  active BOOLEAN NOT NULL
+);
+CREATE TABLE IF NOT EXISTS categories (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  active BOOLEAN NOT NULL
+);
+CREATE TABLE IF NOT EXISTS tags_categories (
+  id_tag INTEGER REFERENCES tags (id),
+  id_category INTEGER REFERENCES categories (id),
+  PRIMARY KEY (id_tag, id_category)
+);
+-- FINISH TAGS --
+
 -- Create table
 CREATE TABLE IF NOT EXISTS organisations (
   id SERIAL PRIMARY KEY,
