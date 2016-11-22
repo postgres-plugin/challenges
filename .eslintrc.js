@@ -1,1 +1,1 @@
-/Users/jmurphy/web/postgres-plugins/Challenges/node_modules/goodparts/.eslintrc.js
+/home/mk4111/work/dwyl/dwyl-repo/Challenges/node_modules/goodparts/.eslintrc.js
