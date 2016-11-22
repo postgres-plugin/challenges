@@ -1,7 +1,7 @@
 
 -- Delete tables
-DROP TABLE IF EXISTS challenges_tags;
-DROP TABLE IF EXISTS challenges;
+DROP TABLE IF EXISTS challenges_tags CASCADE;
+DROP TABLE IF EXISTS challenges CASCADE;
 
 -- Create table
 CREATE TABLE IF NOT EXISTS challenges (
