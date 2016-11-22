@@ -7,11 +7,11 @@ var env = require('env2')('.env'); //eslint-disable-line
 
 
 // DEFAULTS
-var defaults = {
+var dev = {
   port: 3000,
   pg: {
     user: process.env.PG_USER || 'postgres',
-    database: process.env.PG_DATABASE || 'ce100',
+    database: process.env.PG_DATABASE || 'challenges',
     password: process.env.PG_PASSWORD || '',
     host: 'localhost',
     port: 5432,
@@ -25,7 +25,7 @@ var test = {
   port: 0,
   pg: {
     user: 'postgres',
-    database: 'ce100_test',
+    database: 'challenges_test',
     password: '',
     host: 'localhost',
     port: 5432,
@@ -34,12 +34,13 @@ var test = {
   }
 };
 
+// The default env is test
 function setUpConfig () {
-  if (process.env.NODE_ENV === 'test') {
-    return test;
+  if (process.env.NODE_ENV === 'dev') {
+    return dev;
   }
 
-  return defaults;
+  return test;
 }
 
 module.exports = setUpConfig;
