@@ -23,7 +23,7 @@ function setup (pool, cb) {
         return cb(queryErr);
       }
 
-      console.log('tables are initialised');
+      console.log('tables are initialised'); // eslint-disable-line
       // disconnect the client
       done();
 
