@@ -20,3 +20,20 @@ test('Server start ok', function (t) {
     });
   });
 });
+
+test('getChallenge for challengeId = 2', function (t) {
+  init(config, function (err, server, pool) {
+    if (err) {
+      return t.fail();
+    }
+
+    return server.inject({ method: 'GET', url: '/getChallenge' },
+      function (res) {
+        console.log('RES', res); // eslint-disable-line
+
+        return pool.end(function () {
+          server.stop(t.end);
+        });
+      });
+  });
+});
