@@ -2,13 +2,13 @@
 
 var test = require('tape');
 var init = require('../example/server.js');
-var config = require('../config/load-config.js')();
+var config = require('../config/load-config.js');
 
 
 test('Server start ok', function (t) {
   init(config, function (err, server, pool) {
     if (err) {
-      return t.fail();
+      return t.fail('Error starting the server, error: ', err);
     }
 
     return server.inject({ method: 'GET', url: '/' }, function (res) {
