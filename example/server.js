@@ -49,7 +49,7 @@ function init (config, callback) {
         return callback(errorStart, server, pool);
       });
     });
-  })
+  });
 }
 
 module.exports = init;
