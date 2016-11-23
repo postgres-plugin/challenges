@@ -49,6 +49,17 @@ function init (config, callback) {
             reply(response);
           });
         }
+      }, {
+        method: 'GET',
+        path: '/getChallengesByTag',
+        handler: function (request, reply) {
+          var tagId = request.query.tagId;
+
+          request.getChallengesByTag(tagId, function (error, response) {
+            Hoek.assert(!error, 'getChallengesByTag failed');
+            reply(response);
+          });
+        }
       }
     ]);
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var addChallenge = require('../lib/queries/addChallenge.js');
+var addChallenge = require('../../lib/queries/addChallenge.js');
 var challengeObj = {
   title: 'Tea',
   description: 'With milk',
