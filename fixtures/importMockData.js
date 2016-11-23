@@ -160,7 +160,7 @@ module.exports = function importMockData (config, cb) {
               query(importTagsChallenges(), pool, function (tagChalErr) {
                 Hoek.assert(!tagChalErr, tagChalErr);
                 pool.end(function () {
-                  return cb('mockdata added to pg');
+                  return cb(null, 'success');
                 })
               });
             });

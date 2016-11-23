@@ -7,7 +7,6 @@
     "active"
   ],
   "challenge": [
-    "id",
     "title",
     "description",
     "date",
