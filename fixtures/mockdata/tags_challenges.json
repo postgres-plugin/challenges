@@ -1,0 +1,36 @@
+[
+  {
+    "challenges_id": 1,
+    "tags_id": 1
+  }, {
+    "challenges_id": 2,
+    "tags_id": 48
+  }, {
+    "challenges_id": 2,
+    "tags_id": 104
+  }, {
+    "challenges_id": 2,
+    "tags_id": 84
+  }, {
+    "challenges_id": 3,
+    "tags_id": 8
+  }, {
+    "challenges_id": 3,
+    "tags_id": 10
+  }, {
+    "challenges_id": 3,
+    "tags_id": 59
+  }, {
+    "challenges_id": 3,
+    "tags_id": 68
+  }, {
+    "challenges_id": 6,
+    "tags_id": 68
+  }, {
+    "challenges_id": 7,
+    "tags_id": 8
+  }, {
+    "challenges_id": 7,
+    "tags_id": 10
+  }
+]
