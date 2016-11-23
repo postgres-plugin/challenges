@@ -42,11 +42,10 @@ test('getChallenge for challengeId = 2', function (t) {
 
     return server.inject({ method: 'GET', url: '/getChallenge' },
       function (res) {
-        var expected = '[{'
-          + '"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Corporate",'
-          + '"org_id":1,"tags_id":2'
-          + '}]';
+        var expected = '{"chal_id":2,"chal_title":"Challenge Number 2",'
+          + '"chal_desc":"How can I...?","tags_name":"Corporate","org_id":1,'
+          + '"tags":[{"id":2,"name":"Corporate"}]}';
+
         t.equal(res.payload, expected, 'server is up and running!');
 
         return pool.end(function () {
