@@ -19,25 +19,38 @@ function init (config, callback) {
       return callback(err);
     }
 
-    server.route([{
-      method: 'GET',
-      path: '/',
-      handler: function (request, reply) {
-        var obj = {
-          title: 'Tea',
-          description: 'With milk',
-          date: '2016-01-01',
-          org_id: 1,
-          creator_id: 1,
-          active: false
-        };
+    server.route([
+      {
+        method: 'GET',
+        path: '/',
+        handler: function (request, reply) {
+          var obj = {
+            title: 'Tea',
+            description: 'With milk',
+            date: '1479491066104',
+            org_id: 1,
+            creator_id: 1,
+            active: false
+          };
 
-        request.addChallenge(obj, function (error, response) {
-          Hoek.assert(!error, 'Add Challenge failed');
-          reply(response);
-        });
+          request.addChallenge(obj, function (error, response) {
+            Hoek.assert(!error, 'Add Challenge failed');
+            reply(response);
+          });
+        }
+      }, {
+        method: 'GET',
+        path: '/getChallenge',
+        handler: function (request, reply) {
+          var challengeId = 2;
+
+          request.getChallenge(challengeId, function (error, response) {
+            Hoek.assert(!error, 'Get Challenge failed');
+            reply(response);
+          });
+        }
       }
-    }]);
+    ]);
 
     return server.start(function (errorStart) {
       return callback(errorStart, server, pool);
