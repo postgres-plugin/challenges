@@ -10,7 +10,7 @@ function setup (configData, cb) {
   initialTablesData(config, function () {
     initServer(config, function (error, server, pool) {
       if (error) {
-        return cb(false);
+        return cb(error);
       }
 
       return cb(error, server, pool);
