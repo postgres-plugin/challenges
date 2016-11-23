@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var getChallenge = require('../lib/queries/getChallenge.js');
+var getChallenge = require('../../lib/queries/getChallenge.js');
 
 var challengeId = 10;
 var query = 'SELECT '
