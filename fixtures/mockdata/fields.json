@@ -1,0 +1,38 @@
+{
+  "organisation": [
+    "id",
+    "name",
+    "logo_url",
+    "mission_statement",
+    "active"
+  ],
+  "challenge": [
+    "id",
+    "title",
+    "description",
+    "date",
+    "org_id",
+    "creator_id",
+    "active"
+  ],
+  "person": [
+    "first_name",
+    "last_name",
+    "user_type",
+    "email",
+    "phone",
+    "password",
+    "org_id",
+    "job_title",
+    "last_login",
+    "active"
+  ],
+  "tagsChallenges": [
+    "tags_id",
+    "challenges_id"
+  ],
+  "tagsOrganisations": [
+    "tags_id",
+    "orgs_id"
+  ]
+}
