@@ -1,70 +1,52 @@
-[
-  {
-    "orgs_id": 0,
-    "tags_id": 0
-  },
-  {
-    "orgs_id": 0,
-    "tags_id": 26
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 8
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 14
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 68
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 102
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 117
-  },
-  {
-    "orgs_id": 3,
+[{
+    "orgs_id": 1,
+    "tags_id": 1
+}, {
+    "orgs_id": 1,
+    "tags_id": 27
+}, {
+    "orgs_id": 4,
+    "tags_id": 9
+}, {
+    "orgs_id": 4,
+    "tags_id": 15
+}, {
+    "orgs_id": 4,
+    "tags_id": 69
+}, {
+    "orgs_id": 4,
+    "tags_id": 103
+}, {
+    "orgs_id": 4,
     "tags_id": 118
-  },
-  {
-    "orgs_id": 3,
-    "tags_id": 120
-  },
-  {
+}, {
     "orgs_id": 4,
-    "tags_id": 111
-  },
-  {
+    "tags_id": 119
+}, {
     "orgs_id": 4,
-    "tags_id": 68
-  },
-  {
-    "orgs_id": 4,
-    "tags_id": 113
-  },
-  {
-    "orgs_id": 4,
+    "tags_id": 121
+}, {
+    "orgs_id": 5,
+    "tags_id": 112
+}, {
+    "orgs_id": 5,
+    "tags_id": 69
+}, {
+    "orgs_id": 5,
     "tags_id": 114
-  },
-  {
+}, {
     "orgs_id": 5,
-    "tags_id": 8
-  },
-  {
-    "orgs_id": 5,
-    "tags_id": 68
-  },
-  {
-    "orgs_id": 5,
-    "tags_id": 10
-  },
-  {
-    "orgs_id": 5,
+    "tags_id": 115
+}, {
+    "orgs_id": 6,
+    "tags_id": 9
+}, {
+    "orgs_id": 6,
+    "tags_id": 69
+}, {
+    "orgs_id": 6,
     "tags_id": 11
-  }
-]
+}, {
+    "orgs_id": 6,
+    "tags_id": 12
+}]

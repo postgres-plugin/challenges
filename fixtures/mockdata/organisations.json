@@ -1,55 +1,47 @@
 [
   {
-    "id": 0,
     "name": "Apple",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Change the economy",
     "active": true
   },
   {
-    "id": 1,
     "name": "dwyl",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Do What You Love!",
     "active": true
   },
   {
-    "id": 2,
     "name": "Charcoal",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Summer!",
     "active": true
   },
   {
-    "id": 3,
     "name": "EMF",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Change the economy",
     "active": true
   },
   {
-    "id": 4,
     "name": "Co-op Group",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Anonymous",
     "active": true
   },
   {
-    "id": 5,
     "name": "Asda",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Every Little Helps",
     "active": false
   },
   {
-    "id": 6,
     "name": "Coca Cola",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Refresh The Nation",
     "active": false
   },
   {
-    "id": 7,
     "name": "Fanta",
     "logo_url": "https://www.google.co.uk/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F647333728977559552%2FaMwJSRk_.png&imgrefurl=https%3A%2F%2Ftwitter.com%2Fcirculareconomy&docid=LnflHfs2r2CePM&tbnid=hJlFf-XJJBgBNM%3A&vet=1&w=460&h=460&bih=678&biw=1301&ved=0ahUKEwjAuOSnkbrQAhWhAMAKHZ5QCvQQMwghKAYwBg&iact=mrc&uact=8",
     "mission_statement": "Refresh The Nation",

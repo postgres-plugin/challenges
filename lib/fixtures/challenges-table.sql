@@ -1,10 +1,9 @@
-
 -- Create table
 CREATE TABLE IF NOT EXISTS challenges (
   id SERIAL PRIMARY KEY,
   title VARCHAR(50) NOT NULL,
   description TEXT NOT NULL,
-  date DATE NOT NULL,
+  date BIGINT NOT NULL,
   org_id INTEGER REFERENCES organisations (id) NOT NULL,
   creator_id INTEGER REFERENCES people (id) NOT NULL,
   active BOOLEAN NOT NULL

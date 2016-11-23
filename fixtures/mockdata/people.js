@@ -32,7 +32,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111111',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 0,
+    org_id: 1,
     job_title: 'Athlete',
     last_login: Date.now(),
     active: true
@@ -44,7 +44,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111111',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 1,
+    org_id: 2,
     job_title: 'Awesome',
     last_login: Date.now(),
     active: true
@@ -56,7 +56,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111111',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 2,
+    org_id: 3,
     job_title: 'Tennis Player',
     last_login: Date.now(),
     active: true
@@ -68,7 +68,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111111',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 3,
+    org_id: 4,
     job_title: 'Tennis Player',
     last_login: Date.now(),
     active: true
@@ -80,7 +80,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111111',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 4,
+    org_id: 5,
     job_title: 'Tennis Player',
     last_login: Date.now(),
     active: true
@@ -128,7 +128,7 @@ module.exports = [
     user_type: 'primary',
     phone: '07111111112',
     password: 'sakdjfl;kasjf;lkdsaj;lkdsfj',
-    org_id: 7,
+    org_id: 8,
     job_title: 'CEO',
     last_login: Date.now(),
     active: true

@@ -10,7 +10,7 @@ var config = require('../../config/load-config.js');
 test('getChallengesByTag endpoint', function (t) {
   initialTablesData(config, function () {
     initServer(config, function (err, server, pool) {
-      var options = { url: '/getChallengesByTag?tagId=68' };
+      var options = { url: '/getChallengesByTag?tagId=69' };
 
       if (err) {
         return t.fail('Error starting the server, error: ', err);
