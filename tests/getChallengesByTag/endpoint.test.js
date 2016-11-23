@@ -7,17 +7,28 @@ var initialTablesData = require('../../fixtures/importMockData.js');
 var config = require('../../config/load-config.js');
 
 
-test('Server start ok', function (t) {
+test('getChallengesByTag endpoint', function (t) {
   initialTablesData(config, function () {
     initServer(config, function (err, server, pool) {
+      var options = { url: '/getChallengesByTag?tagId=68' };
+
       if (err) {
         return t.fail('Error starting the server, error: ', err);
       }
 
-      return server.inject({ method: 'GET', url: '/getChallengesByTag?tagId=68' }, function (res) {
-        // t.equal(res.payload, '[]', 'server is up and running!');
+      return server.inject(options, function (response) {
+        var challenges = response.result.challenges;
 
-        return pool.end(function () {
+        t.equal(challenges.length, 2,
+          'Two challenges returned when filtering by tag with id 68');
+
+        t.equal(challenges[0].tags.length, 4,
+          'First challenge has 4 tags attached');
+
+        t.equal(challenges[1].tags.length, 1,
+          'Two challenges returned when filtering by tag with id 68');
+
+        return pool.end(function () { // eslint-disable-line
           server.stop(t.end);
         });
       });

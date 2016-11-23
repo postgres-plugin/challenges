@@ -140,6 +140,7 @@ function importTagsChallenges () {
   }).join('');
 }
 
+/* eslint-disable */
 module.exports = function importMockData (config, cb) {
   var pool = new pg.Pool(config.pg);
 
@@ -170,3 +171,4 @@ module.exports = function importMockData (config, cb) {
     });
   });
 };
+/* eslint-enable */
