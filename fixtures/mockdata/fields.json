@@ -1,6 +1,5 @@
 {
   "organisation": [
-    "id",
     "name",
     "logo_url",
     "mission_statement",
