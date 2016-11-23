@@ -43,17 +43,19 @@ test('getChallenge for challengeId = 2', function (t) {
     return server.inject({ method: 'GET', url: '/getChallenge' },
       function (res) {
         var expected = {
-          chal_desc: 'How can I...?',
-          chal_id: 2,
-          chal_title: 'Challenge Number 2',
+          creator_id: 3,
+          description: 'How can I...?',
+          id: 2,
           org_id: 1,
           tags: [
             {
               id: 2,
               name: 'Corporate'
             }
-          ]
+          ],
+          title: 'Challenge Number 2'
         };
+
 
         t.deepEquals(res.result, expected,
           'getChallengeById returns challenge details and associated tag ids');
