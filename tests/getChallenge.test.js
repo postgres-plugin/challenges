@@ -14,7 +14,8 @@ var query = 'SELECT '
   + 'JOIN tags ON tags_challenges.tags_id = tags.id '
   + 'WHERE tags.active = true '
   + 'AND challenges.active = true '
-  + 'AND challenges.id = ' + challengeId + ';';
+  + 'AND challenges.id = ' + challengeId + ' '
+  + 'ORDER BY tags.name ASC;';
 
 test('getChallenge query string', function (t) {
   t.equal(getChallenge(10), query,
