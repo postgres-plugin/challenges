@@ -44,16 +44,9 @@ test('getChallenge for challengeId = 2', function (t) {
       function (res) {
         var expected = '[{'
           + '"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Waste to energy",'
-          + '"org_id":0,"tags_id":48},'
-          + '{"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Fertiliser","org_id":0,'
-          + '"tags_id":84},'
-          + '{"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Buildings design",'
-          + '"org_id":0,"tags_id":104'
+          + '"chal_desc":"How can I...?","tags_name":"Corporate",'
+          + '"org_id":1,"tags_id":2'
           + '}]';
-
         t.equal(res.payload, expected, 'server is up and running!');
 
         return pool.end(function () {
