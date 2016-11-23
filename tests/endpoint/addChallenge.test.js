@@ -1,10 +1,10 @@
 'use strict';
 
 var test = require('tape');
-var initServer = require('../example/server.js');
-var initialTablesData = require('../fixtures/importMockData.js');
+var initServer = require('../../example/server.js');
+var initialTablesData = require('../../fixtures/importMockData.js');
 
-var config = require('../config/load-config.js');
+var config = require('../../config/load-config.js');
 
 
 test('Server start ok', function (t) {
