@@ -42,11 +42,21 @@ test('getChallenge for challengeId = 2', function (t) {
 
     return server.inject({ method: 'GET', url: '/getChallenge' },
       function (res) {
-        var expected = '{"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Corporate","org_id":1,'
-          + '"tags":[{"id":2,"name":"Corporate"}]}';
+        var expected = {
+          chal_desc: 'How can I...?',
+          chal_id: 2,
+          chal_title: 'Challenge Number 2',
+          org_id: 1,
+          tags: [
+            {
+              id: 2,
+              name: 'Corporate'
+            }
+          ]
+        };
 
-        t.equal(res.payload, expected, 'server is up and running!');
+        t.deepEquals(res.result, expected,
+          'getChallengeById returns challenge details and associated tag ids');
 
         return pool.end(function () {
           server.stop(t.end);
