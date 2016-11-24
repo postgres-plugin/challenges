@@ -1,8 +1,6 @@
 'use strict';
 
 var test = require('tape');
-var initServer = require('../../example/server.js');
-var initialTablesData = require('../../fixtures/importMockData.js');
 
 var config = require('../../config/load-config.js');
 var setup = require('../setup-helper.js');
@@ -15,12 +13,23 @@ test('getChallenge for challengeId = 2', function (t) {
 
     return server.inject({ method: 'GET', url: '/getChallenge' },
       function (res) {
-        var expected = '[{'
-          + '"chal_id":2,"chal_title":"Challenge Number 2",'
-          + '"chal_desc":"How can I...?","tags_name":"Corporate",'
-          + '"org_id":1,"tags_id":2'
-          + '}]';
-        t.equal(res.payload, expected, 'server is up and running!');
+        var expected = {
+          creator_id: 3,
+          description: 'How can I...?',
+          id: 2,
+          org_id: 1,
+          tags: [
+            {
+              id: 2,
+              name: 'Corporate'
+            }
+          ],
+          title: 'Challenge Number 2'
+        };
+
+
+        t.deepEquals(res.result, expected,
+          'getChallengeById returns challenge details and associated tag ids');
 
         return pool.end(function () {
           server.stop(t.end);
