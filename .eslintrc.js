@@ -1,1 +1,0 @@
-/home/mk4111/work/dwyl/dwyl-repo/Challenges/node_modules/goodparts/.eslintrc.js
