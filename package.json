@@ -1,8 +1,8 @@
 {
-  "name": "Challenges",
-  "version": "1.0.0",
-  "description": "This document is a draft which contains ideas and first thoughts on how to build a reusable challenges-system.",
-  "main": "index.js",
+  "name": "pg-challenges",
+  "version": "0.0.1",
+  "description": "Reusable challenges-system build with Postgres and Hapi.",
+  "main": "lib/index.js",
   "scripts": {
     "start": "node ./example/start.js",
     "startmon": "nodemon ./example/start.js",

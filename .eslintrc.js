@@ -1,1 +1,0 @@
-/home/simon/Documents/postgres-plugin/challenges/node_modules/goodparts/.eslintrc.js
