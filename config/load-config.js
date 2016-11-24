@@ -24,9 +24,9 @@ var dev = {
 var test = {
   port: 0,
   pg: {
-    user: 'postgres',
-    database: 'challenges_test',
-    password: '',
+    user: process.env.PG_USER_TEST || 'postgres',
+    database: process.env.PG_DATABASE_TEST || 'challenges_test',
+    password: process.env.PG_PASSWORD_TEST || '',
     host: 'localhost',
     port: 5432,
     max: 10,
