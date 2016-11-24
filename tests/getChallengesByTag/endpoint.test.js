@@ -31,5 +31,5 @@ test('getChallengesByTag endpoint', function (t) {
       });
     });
   });
-
 });
+

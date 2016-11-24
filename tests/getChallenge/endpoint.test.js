@@ -11,6 +11,7 @@ test('getChallenge for challengeId = 2', function (t) {
     if (error) {
       return t.fail('Error starting the server, error: ', error);
     }
+
     return server.inject({ method: 'GET', url: '/getChallenge' },
       function (res) {
         var expected = {
