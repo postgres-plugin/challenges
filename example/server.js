@@ -101,7 +101,7 @@ function init (config, callback) {
             method: 'GET',
             path: '/getAllActive',
             handler: function (request, reply) {
-              request.getAllActive(function (error, response) {
+              request.getChallengesByTag(false, function (error, response) {
                 Hoek.assert(!error, 'getAllActive failed');
                 reply(response);
               });
