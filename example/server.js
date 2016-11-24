@@ -51,7 +51,7 @@ function init (config, callback) {
       register: challenges,
       options: optionsChallenges
     }, function (challengesErr) {
-      console.log('chals', challengesErr);
+      console.log('chalsError', challengesErr);
         if (challengesErr) {
           return callback(challengesErr);
         }
@@ -94,6 +94,15 @@ function init (config, callback) {
 
               request.getChallengesByTag(tagId, function (error, response) {
                 Hoek.assert(!error, 'getChallengesByTag failed');
+                reply(response);
+              });
+            }
+          }, {
+            method: 'GET',
+            path: '/getAllActive',
+            handler: function (request, reply) {
+              request.getAllActive(function (error, response) {
+                Hoek.assert(!error, 'getAllActive failed');
                 reply(response);
               });
             }

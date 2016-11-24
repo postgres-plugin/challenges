@@ -24,6 +24,8 @@ test('getChallengesByTag endpoint', function (t) {
       t.equal(challenges[1].tags.length, 1,
         'Two challenges returned when filtering by tag with id 68');
 
+
+
       return pool.end(function () { // eslint-disable-line
         server.stop(t.end);
       });

@@ -26,27 +26,32 @@ var rows = [{
   filter_tag: null
 }];
 
-var formatted = [{
-  id: 3,
-  date: '1479491066104',
-  title: 'Challenge Number 4',
-  description: 'Who should I...?',
-  org_id: 1,
-  shared_by: 'dwyl',
-  tags: [{
-    tag_id: 8,
-    tag_name: 'Automotive and Transport Manufacturing'
-  }, {
-    tag_id: 10,
-    tag_name: 'Chemicals'
+var formatted = {
+  filter_tag: undefined,
+  challenges: [{
+    id: 3,
+    date: '1479491066104',
+    title: 'Challenge Number 4',
+    description: 'Who should I...?',
+    org_id: 1,
+    shared_by: 'dwyl',
+    tags: [{
+      tag_id: 8,
+      tag_name: 'Automotive and Transport Manufacturing'
+    }, {
+      tag_id: 10,
+      tag_name: 'Chemicals'
+    }]
   }]
-}];
+};
 
 test('getChallengesByTag formatter helper function', function (t) {
   t.deepEqual(getChallengesByTag(rows), formatted,
     'getChallengesByTag formatter takes rows from db and builds up tags array '
     + 'if multiple tags per challenge');
-  t.deepEqual(getChallengesByTag([]), [], 'getChallengesByTag formatter '
+
+  var noResultsExpected = { challenges: [], filter_tag: undefined }
+  t.deepEqual(getChallengesByTag([]), noResultsExpected, 'getChallengesByTag formatter '
   + 'takes an empty array and returns an empty array');
   t.end();
 });
