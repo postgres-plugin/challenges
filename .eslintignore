@@ -1,7 +1,5 @@
 .git
-
 coverage
-
 node_modules
-
 .eslintrc
+tests

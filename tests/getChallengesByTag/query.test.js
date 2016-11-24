@@ -44,6 +44,6 @@ var query = 'SELECT '
 
 test('getChallengesByTag query string', function (t) {
   t.equal(getChallengesByTag(68), query,
-    'getChallengesByTag function takes an object and outputs a valid querystring');
+    'getChallengesByTag function takes an object and give a valid querystring');
   t.end();
 });
