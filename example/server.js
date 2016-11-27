@@ -59,6 +59,7 @@ function init (config, callback) {
 
         return callback(errorPeople);
       }
+
       return server.register({
         register: challenges,
         options: optionsChallenges
@@ -92,7 +93,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var challengeId = 2;
 
-              request.pg.challenges.getById(challengeId, function (error, response) {
+              request.pg.challenges.getById(challengeId, function (error, response) { //eslint-disable-line
                 Hoek.assert(!error, 'getById failed');
                 reply(response);
               });
