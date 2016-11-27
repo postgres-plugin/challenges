@@ -81,7 +81,7 @@ function init (config, callback) {
                 active: false
               };
 
-              request.addChallenge(obj, function (error, response) {
+              request.pg.challenges.addChallenge(obj, function (error, response) {
                 Hoek.assert(!error, 'Add Challenge failed');
                 reply(response);
               });
@@ -92,7 +92,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var challengeId = 2;
 
-              request.getChallenge(challengeId, function (error, response) {
+              request.pg.challenges.getChallenge(challengeId, function (error, response) {
                 Hoek.assert(!error, 'Get Challenge failed');
                 reply(response);
               });
@@ -103,7 +103,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var tagId = request.query.tagId;
 
-              request.getChallengesByTag(tagId, function (error, response) {
+              request.pg.challenges.getChallengesByTag(tagId, function (error, response) {
                 Hoek.assert(!error, 'getChallengesByTag failed');
                 reply(response);
               });
@@ -112,7 +112,7 @@ function init (config, callback) {
             method: 'GET',
             path: '/getAllActive',
             handler: function (request, reply) {
-              request.getChallengesByTag(false, function (error, response) {
+              request.pg.challenges.getChallengesByTag(false, function (error, response) {
                 Hoek.assert(!error, 'getAllActive failed');
                 reply(response);
               });
