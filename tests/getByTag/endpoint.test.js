@@ -25,11 +25,9 @@ test('getByTag endpoint', function (t) {
         'Two challenges returned when filtering by tag with id 68');
 
 
-
       return pool.end(function () { // eslint-disable-line
         server.stop(t.end);
       });
     });
   });
 });
-
