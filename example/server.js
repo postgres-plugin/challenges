@@ -81,30 +81,30 @@ function init (config, callback) {
                 active: false
               };
 
-              request.pg.challenges.addChallenge(obj, function (error, response) {
+              request.pg.challenges.add(obj, function (error, response) {
                 Hoek.assert(!error, 'Add Challenge failed');
                 reply(response);
               });
             }
           }, {
             method: 'GET',
-            path: '/getChallenge',
+            path: '/getById',
             handler: function (request, reply) {
               var challengeId = 2;
 
-              request.pg.challenges.getChallenge(challengeId, function (error, response) {
-                Hoek.assert(!error, 'Get Challenge failed');
+              request.pg.challenges.getById(challengeId, function (error, response) {
+                Hoek.assert(!error, 'getById failed');
                 reply(response);
               });
             }
           }, {
             method: 'GET',
-            path: '/getChallengesByTag',
+            path: '/getByTag',
             handler: function (request, reply) {
               var tagId = request.query.tagId;
 
-              request.pg.challenges.getChallengesByTag(tagId, function (error, response) {
-                Hoek.assert(!error, 'getChallengesByTag failed');
+              request.pg.challenges.getByTag(tagId, function (error, response) {
+                Hoek.assert(!error, 'getByTag failed');
                 reply(response);
               });
             }
@@ -112,7 +112,7 @@ function init (config, callback) {
             method: 'GET',
             path: '/getAllActive',
             handler: function (request, reply) {
-              request.pg.challenges.getChallengesByTag(false, function (error, response) {
+              request.pg.challenges.getByTag(false, function (error, response) {
                 Hoek.assert(!error, 'getAllActive failed');
                 reply(response);
               });

@@ -14,8 +14,9 @@ Pre-requisites:
   npm run db
   ```
 
-A plugin which:
+A plugin which exposes the following functions on the request.pg.challengs object:
 - creates a 'Challenges' table
-- _addChallenge_ function to add challenge to pre-existing challenge table
-- _getChallenge_ function to get challenge, and associated tags,
+- _add_ function to add challenge to pre-existing challenge table
+- _getById_ function to get challenge, and associated tags,
 from pre-existing challenge table, by specifying a challenge id.
+- _getByTag_ function to get all challenges that contain a certain tag, if given false, returns all active challenges

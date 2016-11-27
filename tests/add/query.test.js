@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var addChallenge = require('../../lib/queries/addChallenge.js');
+var add = require('../../lib/queries/add.js');
 var challengeObj = {
   title: 'Tea',
   description: 'With milk',
@@ -15,8 +15,8 @@ var query = 'INSERT INTO challenges ('
   + '(\'Tea\', \'With milk\', 2016-01-01, 1, 2, true);';
 
 
-test('addChallenge query string', function (t) {
-  t.equal(addChallenge(challengeObj), query,
-    'addChallenge function takes an object and outputs a valid query string');
+test('add query string', function (t) {
+  t.equal(add(challengeObj), query,
+    'add function takes an object and outputs a valid query string');
   t.end();
 });

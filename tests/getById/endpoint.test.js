@@ -6,13 +6,13 @@ var config = require('../../config/load-config.js');
 
 var initServer = require('../../example/server.js');
 
-test('getChallenge for challengeId = 2', function (t) {
+test('getById for challengeId = 2', function (t) {
   initServer(config, function (error, server, pool) {
     if (error) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject({ method: 'GET', url: '/getChallenge' },
+    return server.inject({ method: 'GET', url: '/getById' },
       function (res) {
         var expected = {
           creator_id: 3,
@@ -30,7 +30,7 @@ test('getChallenge for challengeId = 2', function (t) {
 
 
         t.deepEquals(res.result, expected,
-          'getChallengeById returns challenge details and associated tag ids');
+          'getById returns challenge details and associated tag ids');
 
         return pool.end(function () {
           server.stop(t.end);

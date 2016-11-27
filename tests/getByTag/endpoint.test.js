@@ -4,9 +4,9 @@ var test = require('tape');
 var initServer = require('../../example/server.js');
 var config = require('../../config/load-config.js');
 
-test('getChallengesByTag endpoint', function (t) {
+test('getByTag endpoint', function (t) {
   initServer(config, function (err, server, pool) {
-    var options = { url: '/getChallengesByTag?tagId=69' };
+    var options = { url: '/getByTag?tagId=69' };
 
     if (err) {
       return t.fail('Error starting the server, error: ', err);

@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var getChallengesByTag = require('../../lib/queries/getChallengesByTag.js');
+var getByTag = require('../../lib/queries/getByTag.js');
 
 var query = 'SELECT '
 + 'tags_challenges.tags_id as tid, '
@@ -42,8 +42,8 @@ var query = 'SELECT '
 + 'challenges.title ASC;';
 
 
-test('getChallengesByTag query string', function (t) {
-  t.equal(getChallengesByTag(68), query,
-    'getChallengesByTag function takes an object and give a valid querystring');
+test('getByTag query string', function (t) {
+  t.equal(getByTag(68), query,
+    'getByTag function takes an object and give a valid querystring');
   t.end();
 });
