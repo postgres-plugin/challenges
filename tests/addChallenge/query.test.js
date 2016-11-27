@@ -14,7 +14,6 @@ var query = 'INSERT INTO challenges ('
   + 'title, description, date, org_id, creator_id, active) VALUES '
   + '(\'Tea\', \'With milk\', 2016-01-01, 1, 2, true);';
 
-  console.log(addChallenge(challengeObj));
 
 test('addChallenge query string', function (t) {
   t.equal(addChallenge(challengeObj), query,
