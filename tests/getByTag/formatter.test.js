@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var getChallengesByTag = require('../../lib/formatters/getChallengesByTag.js');
+var getByTag = require('../../lib/formatters/getByTag.js');
 
 
 var rows = [{
@@ -45,13 +45,13 @@ var formatted = {
   }]
 };
 
-test('getChallengesByTag formatter helper function', function (t) {
-  t.deepEqual(getChallengesByTag(rows), formatted,
-    'getChallengesByTag formatter takes rows from db and builds up tags array '
+test('getByTag formatter helper function', function (t) {
+  t.deepEqual(getByTag(rows), formatted,
+    'getByTag formatter takes rows from db and builds up tags array '
     + 'if multiple tags per challenge');
 
   var noResultsExpected = { challenges: [], filter_tag: undefined }
-  t.deepEqual(getChallengesByTag([]), noResultsExpected, 'getChallengesByTag formatter '
+  t.deepEqual(getByTag([]), noResultsExpected, 'getByTag formatter '
   + 'takes an empty array and returns an empty array');
   t.end();
 });

@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var getChallenge = require('../../lib/queries/getChallenge.js');
+var getById = require('../../lib/queries/getById.js');
 
 var challengeId = 10;
 var query = 'SELECT '
@@ -17,8 +17,8 @@ var query = 'SELECT '
   + 'AND challenges.id = ' + challengeId + ' '
   + 'ORDER BY tags.name ASC;';
 
-test('getChallenge query string', function (t) {
-  t.equal(getChallenge(10), query,
-    'getChallenge fn takes a challengeId and outputs a valid query string');
+test('getById query string', function (t) {
+  t.equal(getById(10), query,
+    'getById fn takes a challengeId and outputs a valid query string');
   t.end();
 });
