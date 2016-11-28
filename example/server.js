@@ -81,6 +81,7 @@ function init (config, callback) {
                 creator_id: 1,
                 active: false
               };
+
               request.server.methods.pg.challenges.add(obj, function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'Add Challenge failed');
                 reply(response);
