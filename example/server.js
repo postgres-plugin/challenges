@@ -82,7 +82,7 @@ function init (config, callback) {
                 active: false
               };
 
-              request.pg.challenges.add(obj, function (error, response) {
+              request.server.methods.pg.challenges.add(obj, function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'Add Challenge failed');
                 reply(response);
               });
@@ -93,7 +93,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var challengeId = 2;
 
-              request.pg.challenges.getById(challengeId, function (error, response) { //eslint-disable-line
+              request.server.methods.pg.challenges.getById(challengeId, function (error, response) { //eslint-disable-line
                 Hoek.assert(!error, 'getById failed');
                 reply(response);
               });
@@ -104,7 +104,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var tagId = request.query.tagId;
 
-              request.pg.challenges.getByTag(tagId, function (error, response) {
+              request.server.methods.pg.challenges.getByTag(tagId, function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'getByTag failed');
                 reply(response);
               });
@@ -113,7 +113,7 @@ function init (config, callback) {
             method: 'GET',
             path: '/getAllActive',
             handler: function (request, reply) {
-              request.pg.challenges.getByTag(false, function (error, response) {
+              request.server.methods.pg.challenges.getByTag(false, function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'getAllActive failed');
                 reply(response);
               });
