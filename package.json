@@ -29,7 +29,7 @@
     "istanbul": "^0.4.5",
     "pg": "^6.1.0",
     "pg-escape": "^0.2.0",
-    "pg-helpers": "0.0.2",
+    "pg-helpers": "1.0.0",
     "tape": "^4.6.2"
   },
   "devDependencies": {
