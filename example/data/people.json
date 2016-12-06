@@ -9,7 +9,8 @@
     "org_id": null,
     "job_title": "Developer",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Marie",
@@ -21,7 +22,8 @@
     "org_id": null,
     "job_title": "Developer",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Sally",
@@ -33,7 +35,8 @@
     "org_id": 1,
     "job_title": "Athlete",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Ben",
@@ -45,7 +48,8 @@
     "org_id": 2,
     "job_title": "Awesome",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Andy",
@@ -57,7 +61,8 @@
     "org_id": 3,
     "job_title": "Tennis Player",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Gale",
@@ -69,7 +74,8 @@
     "org_id": 4,
     "job_title": "Tennis Player",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Maria",
@@ -81,7 +87,8 @@
     "org_id": 5,
     "job_title": "Tennis Player",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Coco",
@@ -93,7 +100,8 @@
     "org_id": null,
     "job_title": "Managing Director",
     "last_login": 1480012514369,
-    "active": false
+    "active": false,
+    "account_activated": true
   },
   {
     "first_name": "Frank",
@@ -105,7 +113,8 @@
     "org_id": null,
     "job_title": "CEO",
     "last_login": 1480012514369,
-    "active": false
+    "active": false,
+    "account_activated": true
   },
   {
     "first_name": "Anna",
@@ -117,7 +126,8 @@
     "org_id": null,
     "job_title": "CEO",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   },
   {
     "first_name": "Ben",
@@ -129,6 +139,7 @@
     "org_id": 8,
     "job_title": "CEO",
     "last_login": 1480012514369,
-    "active": true
+    "active": true,
+    "account_activated": true
   }
 ]

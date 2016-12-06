@@ -16,7 +16,7 @@ Pre-requisites:
 
 - creates a 'Challenges' table
 
-A plugin which exposes the following functions on the request.pg.challengs object:
+A plugin which exposes the following functions on the request.server.methods.pg.challengs object:
 
 ### _add(challengeObject, cb)_
 function to add challenge to pre-existing challenge table
