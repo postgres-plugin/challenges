@@ -76,7 +76,6 @@ function init (config, callback) {
               var obj = {
                 title: 'Tea',
                 description: 'With milk',
-                date: '1479491066104',
                 org_id: 1,
                 creator_id: 1,
                 active: false

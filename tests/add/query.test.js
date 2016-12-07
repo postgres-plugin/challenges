@@ -5,14 +5,13 @@ var add = require('../../lib/queries/add.js');
 var challengeObj = {
   title: 'Tea',
   description: 'With milk',
-  date: '2016-01-01',
   org_id: 1,
   creator_id: 2,
   active: true
 };
 var query = 'INSERT INTO challenges ('
-  + 'title, description, date, org_id, creator_id, active) VALUES '
-  + '(\'Tea\', \'With milk\', 2016-01-01, 1, 2, true);';
+  + 'title, description, org_id, creator_id, active) VALUES '
+  + '(\'Tea\', \'With milk\', 1, 2, true);';
 
 
 test('add query string', function (t) {

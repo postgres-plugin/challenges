@@ -25,7 +25,6 @@ challengeObject:
 {
   title: 'Tea',
   description: 'With milk',
-  date: '1479491066104',
   org_id: 1,
   creator_id: 1,
   active: true
@@ -62,7 +61,7 @@ If a tag id is given, returns:
 { filter_tag: 'Design for disassembly',
   challenges:
    [ { id: 4,
-       date: '1479491066104',
+       date: '2016-12-07 15:36:24.636112+00',
        title: 'Challenge Number 4',
        description: 'Who should I...?',
        org_id: 2,
@@ -75,7 +74,7 @@ If a tag id is given, returns:
         ]
       },
      { id: 7,
-       date: '1479491066104',
+       date: '2016-12-07 15:36:24.636112+00',
        title: 'Challenge Number 7',
        description: 'Is it possible to...?',
        org_id: 4,
