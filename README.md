@@ -90,3 +90,7 @@ If `false` is given, returns the same shape, but with
 ```js
 filter_tag: undefined
 ```
+
+### _checkEditable(userId, chalId, cb)_
+returns Boolean
+If user and belongs to the org that created the challenge, return true; otherwise false.
