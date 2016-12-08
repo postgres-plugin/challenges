@@ -117,6 +117,18 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/checkEditable',
+            handler: function (request, reply) {
+              var userId = request.query.userId;
+              var chalId = request.query.chalId;
+
+              request.server.methods.pg.challenges.checkEditable(userId, chalId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'checkEditable failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
