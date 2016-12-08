@@ -13,7 +13,7 @@ test('add Challenge function', function (t) {
     }
 
     return server.inject({ method: 'GET', url: '/' }, function (res) {
-      t.equal(res.payload, '[]', 'challenge was added!');
+      t.deepEqual(res.result, [{ id: 9 }], 'challenge was added!');
 
       return pool.end(function () {
         server.stop(t.end);

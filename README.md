@@ -31,7 +31,8 @@ challengeObject:
 }
 ```
 
-Returns `[]` if challenge was successfully added, and an error if not.
+Returns `[{ id: x }]` if challenge was successfully added, where x is assigned by postgres.
+Returns an error if unsuccessful.
 
 
 ### _getById(id, cb)_
