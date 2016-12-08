@@ -80,7 +80,7 @@ If a tag id is given, returns:
        description: 'Is it possible to...?',
        org_id: 4,
        shared_by: 'EMF',
-       tags: [{}, {}, ... ]
+       tags: null // if no tags have been attached to the challenge
      },
       ...
     ]

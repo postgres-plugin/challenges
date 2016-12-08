@@ -24,6 +24,14 @@ var rows = [{
   org_name: 'dwyl',
   org_id: 1,
   filter_tag: null
+}, {
+  chal_id: 6,
+  chal_date: '2016-12-07T15:40:58.195Z',
+  chal_title: 'Challenge Number 6',
+  chal_description: 'What is the best way to...?',
+  org_name: 'dwyl',
+  org_id: 1,
+  filter_tag: null
 }];
 
 var formatted = {
@@ -42,6 +50,14 @@ var formatted = {
       tag_id: 10,
       tag_name: 'Chemicals'
     }]
+  }, {
+    id: 6,
+    date: '2016-12-07T15:40:58.195Z',
+    title: 'Challenge Number 6',
+    description: 'What is the best way to...?',
+    org_id: 1,
+    shared_by: 'dwyl',
+    tags: []
   }]
 };
 
