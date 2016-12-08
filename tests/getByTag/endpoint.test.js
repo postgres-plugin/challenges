@@ -16,14 +16,13 @@ test('getByTag endpoint', function (t) {
       var challenges = response.result.challenges;
 
       t.equal(challenges.length, 2,
-        'Two challenges returned when filtering by tag with id 68');
+        'Two challenges returned when filtering by tag with id 69');
 
       t.equal(challenges[0].tags.length, 4,
         'First challenge has 4 tags attached');
 
       t.equal(challenges[1].tags.length, 1,
-        'Two challenges returned when filtering by tag with id 68');
-
+        'Two challenges returned when filtering by tag with id 69');
 
       return pool.end(function () { // eslint-disable-line
         server.stop(t.end);
