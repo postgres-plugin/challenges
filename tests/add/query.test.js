@@ -9,9 +9,10 @@ var challengeObj = {
   creator_id: 2,
   active: true
 };
-var query = 'INSERT INTO challenges ('
-  + 'title, description, org_id, creator_id, active) VALUES '
-  + '(\'Tea\', \'With milk\', 1, 2, true);';
+var query = 'INSERT INTO challenges ( '
+  + 'title, description, org_id, creator_id, active ) VALUES '
+  + '( \'Tea\', \'With milk\', 1, 2, true ) '
+  + 'RETURNING id;';
 
 
 test('add query string', function (t) {
