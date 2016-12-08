@@ -57,7 +57,7 @@ var formatted = {
     description: 'What is the best way to...?',
     org_id: 1,
     shared_by: 'dwyl',
-    tags: null
+    tags: []
   }]
 };
 
