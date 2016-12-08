@@ -13,7 +13,7 @@ test('getAllActive endpoint returns correct challenges', function (t) {
     }
 
     return server.inject({ method: 'GET', url: '/getAllActive' }, function (res) {
-      t.equal(res.result.challenges.length, 4, '4 active challenges returned');
+      t.equal(res.result.challenges.length, 6, '6 active challenges returned');
 
       return pool.end(function () {
         server.stop(t.end);
