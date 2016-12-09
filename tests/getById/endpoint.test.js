@@ -114,6 +114,27 @@ test('getById for challengeId = 9', function (t) {
   });
 });
 
+// org.active = false, chal.active = false. No tags
+test('getById for challengeId = 10', function (t) {
+  initServer(config, function (error, server, pool) {
+    if (error) {
+      return t.fail('Error starting the server, error: ', error);
+    }
+
+    return server.inject(endpoint(10), function (res) {
+      var expected = {};
+
+      t.deepEquals(res.result, expected,
+        'empty object returned for inactive chal of an inactive org');
+
+      return pool.end(function () {
+        server.stop(t.end);
+      });
+    });
+  });
+});
+
+
 // QUESTION FOR @JMURPHYWEB AND @SIMONLAB, DO WE WANT TO RETURN {} FOR NON-EXISTENT CHALLENGES?
 // non-existent challenge returns *empty object*
 test('getById for challengeId = 9', function (t) {
