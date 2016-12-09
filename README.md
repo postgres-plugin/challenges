@@ -46,8 +46,9 @@ returns:
   title: 'Challenge Number 2',
   description: 'How can I...?',
   org_id: 1,
+  org_name: 'Apple'
   creator_id: 3,
-  tags: [ { id: 2, name: 'Corporate' } ]
+  tags: [ { id: 2, name: 'Corporate' } ] || [] // if no tags
 }
 ```
 or an empty object `{}` if no challenge was found.
