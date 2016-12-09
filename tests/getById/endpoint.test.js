@@ -21,9 +21,9 @@ test('getById for challengeId = 1', function (t) {
     }
 
     return server.inject(endpoint(1), function (res) {
-      var expected = {};
+      var expected = '[]';
 
-      t.deepEquals(res.result, expected,
+      t.deepEquals(res.payload, expected,
         'returns empty object for inactive chal from active org');
 
       return pool.end(function () {
@@ -102,9 +102,9 @@ test('getById for challengeId = 9', function (t) {
     }
 
     return server.inject(endpoint(9), function (res) {
-      var expected = {};
+      var expected = '[]';
 
-      t.deepEquals(res.result, expected,
+      t.deepEquals(res.payload, expected,
         'empty object returned for inactive chal of an active org');
 
       return pool.end(function () {
@@ -122,9 +122,9 @@ test('getById for challengeId = 10', function (t) {
     }
 
     return server.inject(endpoint(10), function (res) {
-      var expected = {};
+      var expected = '[]';
 
-      t.deepEquals(res.result, expected,
+      t.deepEquals(res.payload, expected,
         'empty object returned for inactive chal of an inactive org');
 
       return pool.end(function () {
