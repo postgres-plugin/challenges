@@ -51,7 +51,7 @@ returns:
   tags: [ { id: 2, name: 'Corporate' } ] || [] // if no tags
 }
 ```
-or an empty object `{}` if no challenge was found.
+or an empty array `[]` if no challenge was found.
 
 ### _getByTag(id, cb)_
 function to get all challenges that contain a certain tag
