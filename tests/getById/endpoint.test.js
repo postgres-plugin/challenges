@@ -24,7 +24,7 @@ test('getById for challengeId = 1', function (t) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
-        'returns empty object for inactive chal from active org');
+        'returns empty array for inactive chal from active org');
 
       return pool.end(function () {
         server.stop(t.end);
@@ -105,7 +105,7 @@ test('getById for challengeId = 9', function (t) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
-        'empty object returned for inactive chal of an active org');
+        'empty array returned for inactive chal of an active org');
 
       return pool.end(function () {
         server.stop(t.end);
@@ -125,7 +125,7 @@ test('getById for challengeId = 10', function (t) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
-        'empty object returned for inactive chal of an inactive org');
+        'empty array returned for inactive chal of an inactive org');
 
       return pool.end(function () {
         server.stop(t.end);
@@ -134,18 +134,17 @@ test('getById for challengeId = 10', function (t) {
   });
 });
 
-
-// QUESTION FOR @JMURPHYWEB AND @SIMONLAB, DO WE WANT TO RETURN {} FOR NON-EXISTENT CHALLENGES?
-// non-existent challenge returns *empty object*
-test('getById for challengeId = 9', function (t) {
+// non-existent challenge returns empty array
+test('getById for challengeId = 500', function (t) {
   initServer(config, function (error, server, pool) {
     if (error) {
       return t.fail('Error starting the server, error: ', error);
     }
 
     return server.inject(endpoint(500), function (res) {
-      t.deepEquals(res.result, {},
-        'getById returns challenge details and associated tag ids');
+      var expected = '[]';
+      t.deepEquals(res.payload, expected,
+        'empty array returned for non-existent chal');
 
       return pool.end(function () {
         server.stop(t.end);
