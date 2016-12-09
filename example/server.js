@@ -90,7 +90,7 @@ function init (config, callback) {
             method: 'GET',
             path: '/getById',
             handler: function (request, reply) {
-              var challengeId = 2;
+              var challengeId = request.query.id;
 
               request.server.methods.pg.challenges.getById(challengeId, function (error, response) { //eslint-disable-line
                 Hoek.assert(!error, 'getById failed');
