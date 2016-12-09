@@ -19,7 +19,8 @@ test('getById for challengeId = 2', function (t) {
           description: 'How can I...?',
           id: 2,
           org_id: 1,
-          tags: [
+          org_name: 'Apple', 
+           tags: [
             {
               id: 2,
               name: 'Corporate'
