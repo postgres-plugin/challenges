@@ -87,6 +87,17 @@ function init (config, callback) {
               });
             }
           }, {
+            method: 'POST',
+            path: '/edit',
+            handler: function (request, reply) {
+              var challengeId = request.query.id;
+
+              request.server.methods.pg.challenges.edit(challengeId, request.payload, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'edit failed');
+                reply(response);
+              });
+            }
+          }, {
             method: 'GET',
             path: '/getById',
             handler: function (request, reply) {
