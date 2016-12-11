@@ -35,6 +35,22 @@ Returns `[{ id: x }]` if challenge was successfully added, where x is assigned b
 Returns an error if unsuccessful.
 
 
+### _edit(challengeId, updatedObject, cb)_
+function to edit the title and description of a pre-existing challenge.
+where:
+`challengeId` = integer and id of existing challenge that needs to be updated
+`updatedObject` takes the following form:
+```js
+{
+  title: 'Two teas',
+  description: 'With milk and one sugar',
+}
+```
+
+Returns `[{ id: x }]` if challenge was successfully added, where x is assigned by postgres.
+Returns an error if unsuccessful.
+
+
 ### _getById(id, cb)_
 function to get a specific challenge, and associated tags,
 id: Integer
