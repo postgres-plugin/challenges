@@ -22,7 +22,7 @@ test('disable an active challenge', function (t) {
       method: 'GET',
       url: '/getById?id=2'
     }, function (res) {
-      t.deepEqual(res.result, active, 'empty array returned because chal is deactivated');
+      t.deepEqual(res.result, active, 'object returned because challenge is active');
 
       server.inject({
         method: 'POST',
