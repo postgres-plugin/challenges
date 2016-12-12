@@ -140,6 +140,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'POST',
+            path: '/toggleActive',
+            handler: function (request, reply) {
+              var chalId = request.query.id;
+
+              request.server.methods.pg.challenges.toggleActive(chalId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'toggleActive failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
