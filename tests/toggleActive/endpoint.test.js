@@ -8,7 +8,7 @@ test('disable an active challenge', function (t) {
   init(config, function (err, server, pool) {
     if (err) return t.fail('error initialising server');
 
-    var active = {
+    var active = [{
       id: 2,
       title: 'Challenge Number 2',
       description: 'How can I...?',
@@ -16,7 +16,7 @@ test('disable an active challenge', function (t) {
       org_id: 1,
       org_name: 'Apple',
       tags: [ { id: 2, name: 'Corporate' } ]
-    };
+    }];
 
     server.inject({
       method: 'GET',
