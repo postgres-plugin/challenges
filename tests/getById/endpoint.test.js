@@ -6,7 +6,7 @@ var config = require('../../config/load-config.js');
 
 var initServer = require('../../example/server.js');
 
-function endpoint (tag) {
+function getChallenge (tag) {
   return {
     method: 'GET',
     url: '/getById?id=' + tag
@@ -20,7 +20,7 @@ test('getById for challengeId = 1', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(1), function (res) {
+    return server.inject(getChallenge(1), function (res) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
@@ -40,7 +40,7 @@ test('getById for challengeId = 2', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(2), function (res) {
+    return server.inject(getChallenge(2), function (res) {
       var expected = {
         creator_id: 3,
         description: 'How can I...?',
@@ -73,7 +73,7 @@ test('getById for challengeId = 5', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(5), function (res) {
+    return server.inject(getChallenge(5), function (res) {
       var expected = {
         creator_id: 4,
         description: 'How have...?',
@@ -101,7 +101,7 @@ test('getById for challengeId = 9', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(9), function (res) {
+    return server.inject(getChallenge(9), function (res) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
@@ -121,7 +121,7 @@ test('getById for challengeId = 10', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(10), function (res) {
+    return server.inject(getChallenge(10), function (res) {
       var expected = '[]';
 
       t.deepEquals(res.payload, expected,
@@ -141,7 +141,7 @@ test('getById for challengeId = 500', function (t) {
       return t.fail('Error starting the server, error: ', error);
     }
 
-    return server.inject(endpoint(500), function (res) {
+    return server.inject(getChallenge(500), function (res) {
       var expected = '[]';
       t.deepEquals(res.payload, expected,
         'empty array returned for non-existent chal');
