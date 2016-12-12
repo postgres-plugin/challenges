@@ -55,13 +55,13 @@ test('enable an inactive challenge', function (t) {
       method: 'POST',
       url: '/toggleActive?id=8'
     }, function (res) {
-      t.deepEqual(res.result, [], 'successful enabling of chal returns an empty array');
+      t.deepEqual(res.payload, '[]', 'successful enabling of chal returns an empty array');
 
       server.inject({
         method: 'GET',
         url: '/getById?id=8'
       }, function (res) {
-        t.ok(res.result, 'the toggle active function has enabled the previously inactive chal');
+        t.ok(res.result[0].title, 'Ice Bucket','the toggle active function has enabled the previously inactive chal');
 
         t.end();
         pool.end()
