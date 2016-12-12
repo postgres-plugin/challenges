@@ -47,7 +47,7 @@ where:
 }
 ```
 
-Returns `[]` if challenge was successfully editted, where x is assigned by postgres.
+Returns `[]` if challenge was successfully.
 Returns an error if unsuccessful.
 
 
