@@ -1,10 +1,10 @@
 'use strict';
 
 var test = require('tape');
+
 var initServer = require('../../example/server.js');
-
 var config = require('../../config/load-config.js');
-
+var challenges = require('../../example/data/challenges.json');
 
 test('add Challenge function', function (t) {
   initServer(config, function (err, server, pool) {
@@ -13,7 +13,7 @@ test('add Challenge function', function (t) {
     }
 
     return server.inject({ method: 'GET', url: '/' }, function (res) {
-      t.deepEqual(res.result, [{ id: 9 }], 'challenge was added!');
+      t.deepEqual(res.result, [{ id: challenges.length + 1 }], 'challenge was added!');
 
       return pool.end(function () {
         server.stop(t.end);

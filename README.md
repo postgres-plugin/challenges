@@ -35,6 +35,22 @@ Returns `[{ id: x }]` if challenge was successfully added, where x is assigned b
 Returns an error if unsuccessful.
 
 
+### _edit(challengeId, updatedObject, cb)_
+function to edit the title and description of a pre-existing challenge.
+where:
+`challengeId` = integer and id of existing challenge that needs to be updated
+`updatedObject` takes the following form:
+```js
+{
+  title: 'Two teas',
+  description: 'With milk and one sugar',
+}
+```
+
+Returns `[]` if challenge was successfully.
+Returns an error if unsuccessful.
+
+
 ### _getById(id, cb)_
 function to get a specific challenge, and associated tags,
 id: Integer
@@ -46,11 +62,12 @@ returns:
   title: 'Challenge Number 2',
   description: 'How can I...?',
   org_id: 1,
+  org_name: 'Apple'
   creator_id: 3,
-  tags: [ { id: 2, name: 'Corporate' } ]
+  tags: [ { id: 2, name: 'Corporate' } ] || [] // if no tags
 }
 ```
-or an empty object `{}` if no challenge was found.
+or an empty array `[]` if no challenge was found.
 
 ### _getByTag(id, cb)_
 function to get all challenges that contain a certain tag
