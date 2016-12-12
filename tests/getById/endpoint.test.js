@@ -41,7 +41,7 @@ test('getById for challengeId = 2', function (t) {
     }
 
     return server.inject(endpoint(2), function (res) {
-      var expected = {
+      var expected = [{
         creator_id: 3,
         description: 'How can I...?',
         id: 2,
@@ -54,7 +54,7 @@ test('getById for challengeId = 2', function (t) {
           }
         ],
         title: 'Challenge Number 2'
-      };
+      }];
 
       t.deepEquals(res.result, expected,
         'returns challenge details and associated tag ids');
@@ -74,7 +74,7 @@ test('getById for challengeId = 5', function (t) {
     }
 
     return server.inject(endpoint(5), function (res) {
-      var expected = {
+      var expected = [{
         creator_id: 4,
         description: 'How have...?',
         id: 5,
@@ -82,7 +82,7 @@ test('getById for challengeId = 5', function (t) {
         org_name: 'dwyl',
         tags: [],
         title: 'Challenge Number 5'
-      };
+      }];
 
       t.deepEquals(res.result, expected,
         'returns challenge details and empty array for tags');
