@@ -11,7 +11,8 @@ var query = [
   'challenges.description AS description,',
   'challenges.creator_id AS creator_id,',
   'challenges.org_id AS org_id,',
-  'organisations.name AS org_name, ',
+  'challenges.active AS active,',
+  'organisations.name AS org_name,',
   'tags.id AS tags_id,',
   'tags.name AS tags_name',
   'FROM organisations',
@@ -22,7 +23,6 @@ var query = [
   'LEFT OUTER JOIN tags',
   'ON (tags.id = tags_challenges.tags_id)',
   'WHERE organisations.active = true',
-  'AND challenges.active = true',
   'AND challenges.id = ' + challengeId,
   'ORDER BY tags_name ASC;'
 ].join(' ');
