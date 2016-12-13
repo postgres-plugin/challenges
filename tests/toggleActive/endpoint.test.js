@@ -12,6 +12,7 @@ test('disable an active challenge', function (t) {
       id: 2,
       title: 'Challenge Number 2',
       description: 'How can I...?',
+      active: true,
       creator_id: 3,
       org_id: 1,
       org_name: 'Apple',
@@ -22,20 +23,31 @@ test('disable an active challenge', function (t) {
       method: 'GET',
       url: '/getById?id=2'
     }, function (res) {
+
       t.deepEqual(res.result, active, 'object returned because challenge is active');
 
       server.inject({
         method: 'POST',
         url: '/toggleActive?id=2'
       }, function (res) {
-
         t.deepEqual(res.payload, '[]', 'successful disabling of challenge returns an empty array');
 
         server.inject({
           method: 'GET',
           url: '/getById?id=2'
         }, function (res) {
-          t.equal(res.payload, '[]', 'empty array returned because chal is deactivated');
+          var expected = [{
+            id: 2,
+            title: 'Challenge Number 2',
+            description: 'How can I...?',
+            active: false,
+            creator_id: 3,
+            org_id: 1,
+            org_name: 'Apple',
+            tags: [ { id: 2, name: 'Corporate' } ]
+          }];
+
+          t.deepEquals(res.result, expected, 'challenge activity is false as expected');
 
           t.end();
           pool.end()

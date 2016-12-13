@@ -21,10 +21,19 @@ test('getById for challengeId = 1', function (t) {
     }
 
     return server.inject(getChallenge(1), function (res) {
-      var expected = '[]';
+      var expected = [{
+        id: 1,
+        title: 'Challenge Number 1',
+        description: 'What can I...?',
+        active: false,
+        creator_id: 3,
+        org_id: 1,
+        org_name: 'Apple',
+        tags: []
+      }];
 
-      t.deepEquals(res.payload, expected,
-        'returns empty array for inactive chal from active org');
+      t.deepEquals(res.result, expected,
+        'returns correct object of inactive challenge, from active org');
 
       return pool.end(function () {
         server.stop(t.end);
@@ -42,6 +51,7 @@ test('getById for challengeId = 2', function (t) {
 
     return server.inject(getChallenge(2), function (res) {
       var expected = [{
+        active: true,
         creator_id: 3,
         description: 'How can I...?',
         id: 2,
@@ -75,6 +85,7 @@ test('getById for challengeId = 5', function (t) {
 
     return server.inject(getChallenge(5), function (res) {
       var expected = [{
+        active: true,
         creator_id: 4,
         description: 'How have...?',
         id: 5,
@@ -102,10 +113,19 @@ test('getById for challengeId = 9', function (t) {
     }
 
     return server.inject(getChallenge(9), function (res) {
-      var expected = '[]';
+      var expected = [{
+        id: 9,
+        title: 'Recommended method of transporting fizzy drinks',
+        description: 'Are there any recommendations to ...',
+        active: false,
+        creator_id: 6,
+        org_id: 4,
+        org_name: 'EMF',
+        tags: []
+      }];
 
-      t.deepEquals(res.payload, expected,
-        'empty array returned for inactive chal of an active org');
+      t.deepEquals(res.result, expected,
+        'returns exact object of inactive challenge, from active org');
 
       return pool.end(function () {
         server.stop(t.end);
