@@ -76,7 +76,7 @@ or `false` if we do not want to filter
 
 If a tag id is given, returns:
 ```js
-{ filter_tag: 'Design for disassembly',
+{ filter: { id: 69, name: 'Design for disassembly' },
   challenges:
    [ { id: 4,
        date: '2016-12-07 15:36:24.636112+00',

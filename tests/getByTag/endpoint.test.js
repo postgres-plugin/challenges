@@ -13,6 +13,10 @@ test('getByTag endpoint', function (t) {
     }
 
     return server.inject(options, function (response) {
+      var filter = response.result.filter;
+      var expectedFilter = { id: 69, name: 'Design for disassembly' };
+      t.deepEqual(filter, expectedFilter, 'the filter tag returns the correct object');
+
       var challenges = response.result.challenges;
 
       t.equal(challenges.length, 2,

@@ -13,7 +13,8 @@ var rows = [{
   chal_description: 'Who should I...?',
   org_name: 'dwyl',
   org_id: 1,
-  filter_tag: null
+  filter_id: null,
+  filter_name: null
 }, {
   tid: 10,
   tags_name: 'Chemicals',
@@ -23,7 +24,8 @@ var rows = [{
   chal_description: 'Who should I...?',
   org_name: 'dwyl',
   org_id: 1,
-  filter_tag: null
+  filter_id: null,
+  filter_name: null
 }, {
   chal_id: 6,
   chal_date: '2016-12-07T15:40:58.195Z',
@@ -31,11 +33,12 @@ var rows = [{
   chal_description: 'What is the best way to...?',
   org_name: 'dwyl',
   org_id: 1,
-  filter_tag: null
+  filter_id: null,
+  filter_name: null
 }];
 
 var formatted = {
-  filter_tag: undefined,
+  filter: null,
   challenges: [{
     id: 3,
     date: '2016-12-07T15:40:58.195Z',
@@ -66,7 +69,7 @@ test('getByTag formatter helper function', function (t) {
     'getByTag formatter takes rows from db and builds up tags array '
     + 'if multiple tags per challenge');
 
-  var noResultsExpected = { challenges: [], filter_tag: undefined }
+  var noResultsExpected = { challenges: [], filter: null }
   t.deepEqual(getByTag([]), noResultsExpected, 'getByTag formatter '
   + 'takes an empty array and returns an empty array');
   t.end();
