@@ -4,7 +4,7 @@ var test = require('tape');
 
 var initServer = require('../../example/server.js');
 var config = require('../../config/load-config.js');
-var challenges = require('../../example/data/challenges.json');
+var challenges = require('ce100-mock-data').challenges;
 
 test('edit challenge function', function (t) {
   var chalId = 2;
