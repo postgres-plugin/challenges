@@ -112,7 +112,7 @@ filter_tag: undefined
 returns Boolean
 If user and belongs to the org that created the challenge, return true; otherwise false.
 
-### _checkEditable(chal_id, cb)_
+### _getMatchingOrgs(chal_id, cb)_
 Returns an array of orgs. Empty array if no orgs share active tags with the given challenge.
 The orgs are ordered by number of tags that they matched the challenge with.
 
