@@ -24,6 +24,7 @@ test('getByTag endpoint for challenge 8', function (t) {
     server.inject(options, function (response) {
       var actual = response.result;
       t.equal(actual.length, 2, 'there are 2 organisations that are suggested');
+
       // check that the number of tags that each org has matched by determines the order
       // var order = actual.map(function (org) { return org.org_name });
       var expectedOrder = cloneArr(actual).sort(byTagsLength).map(getOrgName);

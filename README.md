@@ -111,3 +111,36 @@ filter_tag: undefined
 ### _checkEditable(userId, chalId, cb)_
 returns Boolean
 If user and belongs to the org that created the challenge, return true; otherwise false.
+
+### _checkEditable(chal_id, cb)_
+Returns an array of orgs. Empty array if no orgs share active tags with the given challenge.
+The orgs are ordered by number of tags that they matched the challenge with.
+
+```js
+[
+  {
+    "name": "Asda",
+    "id": 6,
+    "tags": [
+      {
+        "tag_name": "Automotive and Transport Manufacturing",
+        "tag_id": 9
+      },
+      {
+        "tag_name": "Chemicals",
+        "tag_id": 11
+      }
+    ]
+  },
+  {
+    "name": "EMF",
+    "id": 4,
+    "tags": [
+      {
+        "tag_name": "Automotive and Transport Manufacturing",
+        "tag_id": 9
+      }
+    ]
+  }
+]
+```
