@@ -145,6 +145,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/getMatchingOrgs',
+            handler: function (request, reply) {
+              var chalId = request.query.chal_id;
+
+              request.server.methods.pg.challenges.getMatchingOrgs(chalId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'toggleActive failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
