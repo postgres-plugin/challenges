@@ -156,6 +156,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/getArchived',
+            handler: function (request, reply) {
+              var orgId = request.query.orgId;
+
+              request.server.methods.pg.challenges.getArchived(orgId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getArchived failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
