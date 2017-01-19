@@ -144,3 +144,15 @@ The orgs are ordered by number of tags that they matched the challenge with.
   }
 ]
 ```
+
+### _getArchived(org_id, cb)_
+Returns an array of challenge objects for a given organisation.
+```js
+{
+  id: 1,
+  title: 'Challenge Number 1',
+  description: 'What can I...?',
+  org_id: 1,
+  creator_id: 3
+}
+```
