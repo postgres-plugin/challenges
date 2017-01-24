@@ -1,6 +1,6 @@
 {
   "name": "pg-challenges",
-  "version": "2.0.18",
+  "version": "2.0.19",
   "description": "Reusable challenges-system build with Postgres and Hapi.",
   "main": "lib/index.js",
   "scripts": {
