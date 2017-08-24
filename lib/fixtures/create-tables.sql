@@ -1,7 +1,7 @@
 -- Create table
 CREATE TABLE IF NOT EXISTS challenges (
   id SERIAL PRIMARY KEY,
-  title VARCHAR(50) NOT NULL,
+  title TEXT NOT NULL,
   description TEXT NOT NULL,
   date TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
   org_id INTEGER REFERENCES organisations (id) NOT NULL,
