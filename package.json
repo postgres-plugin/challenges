@@ -1,6 +1,6 @@
 {
   "name": "pg-challenges",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Reusable challenges-system build with Postgres and Hapi.",
   "main": "lib/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/postgres-plugin/Challenges#readme",
   "dependencies": {
     "boom": "^4.2.0",
-    "ce100-mock-data": "^1.0.5",
+    "ce100-mock-data": "^1.1.2",
     "env2": "^2.1.1",
     "hapi": "^15.2.0",
     "hoek": "^4.1.0",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "goodparts": "^1.1.4",
     "nodemon": "^1.11.0",
-    "pg-people": "0.0.22",
+    "pg-people": "0.1.6",
     "pre-commit": "^1.1.3",
     "tags-system": "^1.0.7",
     "tap-spec": "^4.1.1"
