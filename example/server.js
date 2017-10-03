@@ -167,6 +167,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/challengesSearch',
+            handler: function (request, reply) {
+              var searchTerm = request.query.searchTerm;
+
+              request.server.methods.pg.challenges.challengesSearch(searchTerm, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'challengesSearch failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
