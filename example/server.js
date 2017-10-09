@@ -178,6 +178,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/getByOrgId',
+            handler: function (request, reply) {
+              var orgId = request.query.orgId;
+
+              request.server.methods.pg.challenges.getByOrgId(orgId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getByOrgId failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
