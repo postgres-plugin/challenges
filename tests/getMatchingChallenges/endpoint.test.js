@@ -19,7 +19,7 @@ test('getMatchingChallenges for challengeId = 1', function (t) {
     };
 
     return server.inject(req, function (res) {
-      t.equal(res.result.length, 3, 'Tests that 3 results match tags 69 and 11')
+      t.equal(res.result.length, 2, 'Tests that 2 results match tags 69 and 11')
 
       return pool.end(function () {
         server.stop(t.end);
