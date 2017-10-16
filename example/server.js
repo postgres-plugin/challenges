@@ -223,6 +223,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/deleteComment',
+            handler: function (request, reply) {
+              var commentId = request.query.id;
+
+              request.server.methods.pg.challenges.deleteComment(commentId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'delete comment failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
