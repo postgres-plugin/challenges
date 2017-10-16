@@ -189,6 +189,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'POST',
+            path: '/addComment',
+            handler: function (request, reply) {
+              var comment = request.payload;
+
+              request.server.methods.pg.challenges.addComment(comment, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getByOrgId failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
