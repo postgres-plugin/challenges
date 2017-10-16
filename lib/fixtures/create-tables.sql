@@ -14,3 +14,16 @@ CREATE TABLE IF NOT EXISTS tags_challenges (
   tags_id INTEGER REFERENCES tags (id),
   challenges_id INTEGER REFERENCES challenges (id)
 );
+
+-- Create table
+CREATE TABLE IF NOT EXISTS comments (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER REFERENCES people (id),
+  comment TEXT NOT NULL,
+  flagged BOOLEAN NOT NULL,
+  author_flag INTEGER REFERENCES people (id),
+  challenge_id INTEGER REFERENCES challenges (id),
+  created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+  active BOOLEAN NOT NULL
+);

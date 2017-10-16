@@ -201,6 +201,28 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'POST',
+            path: '/addComment',
+            handler: function (request, reply) {
+              var comment = request.payload;
+
+              request.server.methods.pg.challenges.addComment(comment, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getByOrgId failed');
+                reply(response);
+              });
+            }
+          }, {
+            method: 'GET',
+            path: '/getComments',
+            handler: function (request, reply) {
+              var challengeId = request.query.id;
+
+              request.server.methods.pg.challenges.getComments(challengeId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getByOrgId failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
