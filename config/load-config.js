@@ -22,7 +22,7 @@ var dev = {
 
 // TEST
 var test = {
-  port: 0,
+  port: 0 || process.env.PORT,
   pg: {
     user: process.env.PG_USER_TEST || 'postgres',
     database: process.env.PG_DATABASE_TEST || 'challenges_test',
