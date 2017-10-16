@@ -42,11 +42,11 @@ test('get comments', function (t) {
           t.equal(res.result.length, 1, 'There is 1 active comment')
           return server.inject(deleteComment, function(res){
             return server.inject(getComments, function(res) {
-              t.equal(res.result.length, 0, 'There are no active comments')
+              t.equal(res.result.length, 0, 'There are no active comments');
+              return pool.end(function () {
+                server.stop(t.end);
+              });
             });
-          });
-          return pool.end(function () {
-            server.stop(t.end);
           });
         })
     });
