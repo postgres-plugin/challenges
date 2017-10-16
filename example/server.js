@@ -212,6 +212,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/getComments',
+            handler: function (request, reply) {
+              var challengeId = request.query.id;
+
+              request.server.methods.pg.challenges.getComments(challengeId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getByOrgId failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
