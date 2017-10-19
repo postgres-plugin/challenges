@@ -234,6 +234,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'POST',
+            path: '/editComment',
+            handler: function (request, reply) {
+              var comment = request.payload;
+
+              request.server.methods.pg.challenges.editComment(comment, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'editComment failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
