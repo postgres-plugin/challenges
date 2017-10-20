@@ -41,7 +41,6 @@ test('flag comments', function (t) {
       return server.inject(flagComment, function(res){
         return server.inject(getComments, function(res) {
           t.equal(res.result[0].flagged, true, 'The comment is flagged');
-          console.log(res.result);
           t.ok(res.result[0].updated_at > res.result[0].created_at, 'Timestamp updated_at updated');
           return pool.end(function () {
             server.stop(t.end);
