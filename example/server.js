@@ -163,7 +163,7 @@ function init (config, callback) {
               var chalId = request.query.chal_id;
               var listOfTags = request.query.listOfTags;
 
-              request.server.methods.pg.challenges.getMatchingChallenges(chalId, listOfTags, function (error, response) { // eslint-disable-line
+              request.server.methods.pg.challenges.getMatchingChallenges(42, chalId, listOfTags, function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'toggleActive failed');
                 reply(response);
               });
