@@ -245,6 +245,16 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'POST',
+            path: '/flagComment',
+            handler: function (request, reply) {
+
+              request.server.methods.pg.challenges.flagComment(request.payload, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'flagComment failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
