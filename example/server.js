@@ -214,12 +214,23 @@ function init (config, callback) {
             }
           }, {
             method: 'GET',
+            path: '/getComment',
+            handler: function (request, reply) {
+              var commentId = request.query.id;
+
+              request.server.methods.pg.challenges.getComment(commentId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'getComment failed');
+                reply(response);
+              });
+            }
+          }, {
+            method: 'GET',
             path: '/getComments',
             handler: function (request, reply) {
               var challengeId = request.query.id;
 
               request.server.methods.pg.challenges.getComments(challengeId, function (error, response) { // eslint-disable-line
-                Hoek.assert(!error, 'getByOrgId failed');
+                Hoek.assert(!error, 'getComments failed');
                 reply(response);
               });
             }
