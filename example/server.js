@@ -266,6 +266,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/getCommentInfo',
+            handler: function (request, reply) {
+              var commentId = request.query.id;
+
+              request.server.methods.pg.challenges.getCommentInfo(commentId, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'getCommentInfo failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
