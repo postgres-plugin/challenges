@@ -29,7 +29,8 @@ test('getById for challengeId = 1', function (t) {
         creator_id: 3,
         org_id: 1,
         org_name: 'Apple',
-        tags: []
+        tags: [],
+        locations: []
       }];
 
       t.deepEquals(res.result, expected,
@@ -58,12 +59,10 @@ test('getById for challengeId = 2', function (t) {
         org_id: 1,
         org_name: 'Apple',
          tags: [
-          {
-            id: 2,
-            name: 'Corporate'
-          }
+          { id: 2 }
         ],
-        title: 'Challenge Number 2'
+        title: 'Challenge Number 2',
+        locations: []
       }];
 
       t.deepEquals(res.result, expected,
@@ -92,7 +91,8 @@ test('getById for challengeId = 5', function (t) {
         org_id: 2,
         org_name: 'dwyl',
         tags: [],
-        title: 'Challenge Number 5'
+        title: 'Challenge Number 5',
+        locations: []
       }];
 
       t.deepEquals(res.result, expected,
@@ -121,7 +121,8 @@ test('getById for challengeId = 9', function (t) {
         creator_id: 6,
         org_id: 4,
         org_name: 'EMF',
-        tags: []
+        tags: [],
+        locations: []
       }];
 
       t.deepEquals(res.result, expected,

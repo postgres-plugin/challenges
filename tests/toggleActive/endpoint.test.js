@@ -16,7 +16,8 @@ test('disable an active challenge', function (t) {
       creator_id: 3,
       org_id: 1,
       org_name: 'Apple',
-      tags: [ { id: 2, name: 'Corporate' } ]
+      tags: [ { id: 2} ],
+      locations: []
     }];
 
     server.inject({
@@ -44,7 +45,8 @@ test('disable an active challenge', function (t) {
             creator_id: 3,
             org_id: 1,
             org_name: 'Apple',
-            tags: [ { id: 2, name: 'Corporate' } ]
+            tags: [ { id: 2 } ],
+            locations: []
           }];
 
           t.deepEquals(res.result, expected, 'challenge activity is false as expected');

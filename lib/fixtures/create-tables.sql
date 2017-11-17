@@ -11,7 +11,13 @@ CREATE TABLE IF NOT EXISTS challenges (
 
 -- Create table
 CREATE TABLE IF NOT EXISTS tags_challenges (
-  tags_id INTEGER REFERENCES tags (id),
+  tags_id INTEGER,
+  challenges_id INTEGER REFERENCES challenges (id)
+);
+
+-- Create table
+CREATE TABLE IF NOT EXISTS locations_challenges (
+  locations_id INTEGER,
   challenges_id INTEGER REFERENCES challenges (id)
 );
 
