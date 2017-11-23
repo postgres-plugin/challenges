@@ -185,7 +185,7 @@ function init (config, callback) {
             handler: function (request, reply) {
               var searchTerm = request.query.searchTerm;
 
-              request.server.methods.pg.challenges.challengesSearch(searchTerm, function (error, response) { // eslint-disable-line
+              request.server.methods.pg.challenges.challengesSearch(searchTerm, [], [], function (error, response) { // eslint-disable-line
                 Hoek.assert(!error, 'challengesSearch failed');
                 reply(response);
               });
