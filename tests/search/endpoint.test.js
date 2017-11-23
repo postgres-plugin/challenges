@@ -17,15 +17,3 @@ test('search for challenges containing searchTerm in description', function (t) 
     });
   });
 });
-
-test('search for challenges containing searchTerm in tags', function (t) {
-  init(config, function (err, server, pool) {
-    server.inject({ url: '/challengesSearch?searchTerm=chemical' }, function (res) {
-      t.equal(res.result.length, 2, '2 challenges found linked to the chemical tag');
-
-      t.end();
-      pool.end();
-      server.stop();
-    });
-  });
-});
