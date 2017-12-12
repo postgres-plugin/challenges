@@ -277,6 +277,28 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          }, {
+            method: 'GET',
+            path: '/people/{userId}/archived-challenges',
+            handler: function (request, reply) {
+              var userId = request.params.userId;
+
+              request.server.methods.pg.challenges.getUsersArchived(userId, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'getUsersArchived failed');
+                reply(response);
+              });
+            }
+          },  {
+            method: 'GET',
+            path: '/people/{userId}/challenges',
+            handler: function (request, reply) {
+              var userId = request.params.userId;
+
+              request.server.methods.pg.challenges.getUsersChallenges(userId, function (error, response) { //eslint-disable-line
+                Hoek.assert(!error, 'getUsersChallenges failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
