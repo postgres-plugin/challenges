@@ -9,7 +9,7 @@ function byTagsLength (a, b) {
 }
 
 function getOrgName (org) {
-  return org.name;
+  return org.org_name;
 }
 
 function cloneArr (arr) {
