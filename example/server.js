@@ -299,6 +299,18 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          } , {
+            method: 'GET',
+            path: '/challengeEditable',
+            handler: function (request, reply) {
+              var userId = request.query.userId;
+              var chalId = request.query.chalId;
+
+              request.server.methods.pg.challenges.challengeEditable(chalId, userId, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'challengeEditable failed');
+                reply(response);
+              });
+            }
           }
         ]);
 
