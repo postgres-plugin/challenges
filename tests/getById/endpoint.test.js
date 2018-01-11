@@ -155,10 +155,9 @@ test('getById for challengeId = 10', function (t) {
     }
 
     return server.inject(getChallenge(10), function (res) {
-      var expected = '[]';
 
-      t.deepEquals(res.payload, expected,
-        'empty array returned for inactive chal of an inactive org');
+      t.ok(res.payload.length, 1,
+        'Challenge of inactive org returned');
 
       return pool.end(function () {
         server.stop(t.end);
