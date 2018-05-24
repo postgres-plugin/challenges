@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS challenges (
 -- Create table
 CREATE TABLE IF NOT EXISTS tags_challenges (
   tags_id INTEGER,
-  challenges_id INTEGER REFERENCES challenges (id)
+  challenges_id INTEGER REFERENCES challenges (id) on delete cascade on update cascade
 );
 
 -- Create table
