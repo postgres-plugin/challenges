@@ -311,6 +311,17 @@ function init (config, callback) {
                 reply(response);
               });
             }
+          },
+          {
+            method: 'POST',
+            path: '/deleteChallenge',
+            handler: function (request, reply) {
+              var id = request.query.id;
+              request.server.methods.pg.challenges.deleteChallenge(id, function (error, response) { // eslint-disable-line
+                Hoek.assert(!error, 'deleteOrg error');
+                reply(response);
+              });
+            }
           }
         ]);
 
